@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Session – HealConnect</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo"
+          ><span class="logo-icon">🌿</span> HealConnect</a
+        >
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="book.html">Book Session</a></li>
+          <li><a href="library.html">Exercise Library</a></li>
+          <li><a href="progress.html">My Recovery</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+        <a href="book.html" class="btn btn-primary nav-cta">Book a Session</a>
+        <button class="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <nav id="mobileMenu" class="mobile-menu">
+      <button id="mobileClose" class="mobile-close-btn">✕</button>
+      <a href="index.html">Home</a><a href="book.html">Book Session</a>
+      <a href="library.html">Exercise Library</a
+      ><a href="progress.html">My Recovery</a><a href="pricing.html">Pricing</a>
+    </nav>
+
+    <header class="page-hero">
+      <div class="container">
+        <span class="section-label u-color-white-60">Appointments</span>
+        <h1>Book Your Session</h1>
+        <p>
+          Choose your therapist, pick a time slot, and start your recovery
+          journey today.
+        </p>
+      </div>
+    </header>
+
+    <main class="booking-section">
+      <div class="container">
+        <div class="booking-layout">
+          <section aria-labelledby="form-title">
+            <div class="booking-form-card fade-up">
+              <h2 class="form-title" id="form-title">Appointment Details</h2>
+              <p class="form-subtitle">
+                All fields marked <span class="required">*</span> are required.
+                We'll confirm your booking within 5 minutes.
+              </p>
+
+              <form id="bookingForm" novalidate>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="patientName"
+                      >Full Name <span class="required">*</span></label
+                    >
+                    <input
+                      type="text"
+                      id="patientName"
+                      class="form-control"
+                      placeholder="e.g. Arjun Mehta"
+                      required
+                      autocomplete="name"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="patientEmail"
+                      >Email Address <span class="required">*</span></label
+                    >
+                    <input
+                      type="email"
+                      id="patientEmail"
+                      class="form-control"
+                      placeholder="you@example.com"
+                      required
+                      autocomplete="email"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="patientPhone"
+                      >Phone / WhatsApp <span class="required">*</span></label
+                    >
+                    <input
+                      type="tel"
+                      id="patientPhone"
+                      class="form-control"
+                      placeholder="+91 9876 543210"
+                      required
+                      autocomplete="tel"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="sessionDate"
+                      >Preferred Date <span class="required">*</span></label
+                    >
+                    <input
+                      type="date"
+                      id="sessionDate"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="injuryCategory"
+                      >Injury / Condition <span class="required">*</span></label
+                    >
+                    <select id="injuryCategory" class="form-control" required>
+                      <option value="" disabled selected>
+                        Select your condition
+                      </option>
+                      <option value="Back Pain">Back Pain / Spine</option>
+                      <option value="Knee Rehab">Knee Rehabilitation</option>
+                      <option value="Shoulder Recovery">
+                        Shoulder Recovery
+                      </option>
+                      <option value="Post-Surgery">Post-Surgery Rehab</option>
+                      <option value="Neck Pain">Neck Pain / Cervical</option>
+                      <option value="Hip">Hip &amp; Pelvis</option>
+                      <option value="General">General Physiotherapy</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="sessionType">Session Mode</label>
+                    <select id="sessionType" class="form-control">
+                      <option value="Online">🎥 Video Call (Online)</option>
+                      <option value="Home Visit">🏠 Home Visit (+₹500)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group full">
+                    <label
+                      >Choose Your Therapist
+                      <span class="required">*</span></label
+                    >
+
+                    <input
+                      type="hidden"
+                      id="therapistHidden"
+                      name="therapist"
+                      required
+                    />
+
+                    <div
+                      class="therapist-pick-grid"
+                      id="therapistPickGrid"
+                      role="radiogroup"
+                      aria-label="Select a therapist"
+                    >
+                      <div
+                        class="tp-card"
+                        data-name="Dr. Sarah Chen"
+                        data-spec="Spine &amp; Back"
+                        role="radio"
+                        aria-checked="false"
+                        tabindex="0"
+                      >
+                        <span class="tp-check" aria-hidden="true">✓</span>
+                        <div class="tp-avatar-lg">👩‍⚕️</div>
+                        <div class="tp-name">Dr. Sarah Chen</div>
+                        <div class="tp-spec">Spine &amp; Back</div>
+                        <div class="tp-rating-row">★★★★★ 4.9</div>
+                        <div class="tp-avail">Next: Today 3 PM</div>
+                      </div>
+
+                      <div
+                        class="tp-card"
+                        data-name="Dr. Marcus Webb"
+                        data-spec="Knee &amp; Sports"
+                        role="radio"
+                        aria-checked="false"
+                        tabindex="0"
+                      >
+                        <span class="tp-check" aria-hidden="true">✓</span>
+                        <div class="tp-avatar-lg">👨‍⚕️</div>
+                        <div class="tp-name">Dr. Marcus Webb</div>
+                        <div class="tp-spec">Knee &amp; Sports</div>
+                        <div class="tp-rating-row">★★★★★ 4.8</div>
+                        <div class="tp-avail">Next: Tomorrow 10 AM</div>
+                      </div>
+
+                      <div
+                        class="tp-card"
+                        data-name="Dr. Priya Sharma"
+                        data-spec="Shoulder &amp; Post-Surgery"
+                        role="radio"
+                        aria-checked="false"
+                        tabindex="0"
+                      >
+                        <span class="tp-check" aria-hidden="true">✓</span>
+                        <div class="tp-avatar-lg">👩‍⚕️</div>
+                        <div class="tp-name">Dr. Priya Sharma</div>
+                        <div class="tp-spec">Shoulder &amp; Post-Surgery</div>
+                        <div class="tp-rating-row">★★★★★ 4.9</div>
+                        <div class="tp-avail">Next: Today 5 PM</div>
+                      </div>
+
+                      <div
+                        class="tp-card"
+                        data-name="Dr. Ravi Nair"
+                        data-spec="Neck &amp; Cervical"
+                        role="radio"
+                        aria-checked="false"
+                        tabindex="0"
+                      >
+                        <span class="tp-check" aria-hidden="true">✓</span>
+                        <div class="tp-avatar-lg">👨‍⚕️</div>
+                        <div class="tp-name">Dr. Ravi Nair</div>
+                        <div class="tp-spec">Neck &amp; Cervical</div>
+                        <div class="tp-rating-row">★★★★½ 4.7</div>
+                        <div class="tp-avail">Next: Thu 2 PM</div>
+                      </div>
+                    </div>
+                    <p id="therapistError" class="field-error">
+                      Please select a therapist to continue.
+                    </p>
+                  </div>
+
+                  <div class="form-group full">
+                    <label
+                      >Available Time Slots
+                      <span class="required">*</span></label
+                    >
+                    <div
+                      class="time-slots"
+                      id="timeSlots"
+                      role="group"
+                      aria-label="Select a time slot"
+                    >
+                      <div class="time-slot" data-time="9:00 AM" tabindex="0">
+                        9:00 AM
+                      </div>
+                      <div class="time-slot" data-time="10:00 AM" tabindex="0">
+                        10:00 AM
+                      </div>
+                      <div
+                        class="time-slot unavailable"
+                        aria-disabled="true"
+                        title="Not available"
+                      >
+                        11:00 AM ✕
+                      </div>
+                      <div class="time-slot" data-time="12:00 PM" tabindex="0">
+                        12:00 PM
+                      </div>
+                      <div class="time-slot" data-time="2:00 PM" tabindex="0">
+                        2:00 PM
+                      </div>
+                      <div
+                        class="time-slot unavailable"
+                        aria-disabled="true"
+                        title="Not available"
+                      >
+                        3:00 PM ✕
+                      </div>
+                      <div class="time-slot" data-time="4:00 PM" tabindex="0">
+                        4:00 PM
+                      </div>
+                      <div class="time-slot" data-time="5:00 PM" tabindex="0">
+                        5:00 PM
+                      </div>
+                      <div class="time-slot" data-time="6:00 PM" tabindex="0">
+                        6:00 PM
+                      </div>
+                    </div>
+                    <p id="slotError" class="field-error">
+                      Please select a time slot.
+                    </p>
+                  </div>
+
+                  <div class="form-group full">
+                    <label for="sessionNotes">Additional Notes</label>
+                    <textarea
+                      id="sessionNotes"
+                      class="form-control"
+                      placeholder="Describe your symptoms, pain level (1–10), or anything your therapist should know before the session..."
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="form-submit-row">
+                  <p class="form-note">
+                    🔒 HIPAA-compliant &amp; end-to-end encrypted
+                  </p>
+                  <button
+                    type="submit"
+                    id="bookSubmitBtn"
+                    class="btn btn-primary"
+                  >
+                    Confirm Booking →
+                  </button>
+                </div>
+              </form>
+            </div>
+          </section>
+
+          <aside class="booking-sidebar">
+            <div class="sidebar-card fade-up">
+              <h4>📋 Booking Summary</h4>
+              <div class="booking-summary">
+                <div class="summary-row">
+                  <span class="label">Patient</span
+                  ><span class="value" id="sumName">—</span>
+                </div>
+                <div class="summary-row">
+                  <span class="label">Date</span
+                  ><span class="value" id="sumDate">—</span>
+                </div>
+                <div class="summary-row">
+                  <span class="label">Time</span
+                  ><span class="value" id="sumTime">—</span>
+                </div>
+                <div class="summary-row">
+                  <span class="label">Therapist</span
+                  ><span class="value" id="sumTherapist">—</span>
+                </div>
+                <div class="summary-row">
+                  <span class="label">Condition</span
+                  ><span class="value" id="sumCategory">—</span>
+                </div>
+                <div class="summary-row">
+                  <span class="label">Mode</span
+                  ><span class="value" id="sumType">Online</span>
+                </div>
+              </div>
+              <div class="summary-total summary-row">
+                <span class="label">Session Fee</span>
+                <span class="value" id="sumFee">₹1,299</span>
+              </div>
+            </div>
+
+            <div class="sidebar-card fade-up sidebar-card-mint">
+              <h4 class="u-color-primary">What Happens Next</h4>
+              <ul class="mint-list">
+                <li>✅ Confirmation email within 5 min</li>
+                <li>🔔 Reminder 1 hour before your session</li>
+                <li>🎥 Secure encrypted video link sent</li>
+                <li>📋 Post-session notes from therapist</li>
+                <li>📊 Progress logged to your dashboard</li>
+              </ul>
+            </div>
+
+            <div class="sidebar-card fade-up">
+              <h4>Cancellation Policy</h4>
+              <p class="cancellation-text">
+                Free cancellation up to <strong>24 hours</strong> before your
+                session. Late cancellations may incur a 50% charge. Reschedule
+                anytime from your dashboard.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="logo-text">🌿 HealConnect</div>
+            <p>Expert physiotherapy care delivered to your home.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Platform</h4>
+            <a href="book.html">Book Session</a
+            ><a href="library.html">Exercise Library</a
+            ><a href="progress.html">My Recovery</a
+            ><a href="pricing.html">Pricing</a>
+          </div>
+          <div class="footer-col">
+            <h4>Specialities</h4>
+            <a href="#">Back Pain</a><a href="#">Knee Rehab</a
+            ><a href="#">Shoulder Recovery</a><a href="#">Post-Surgery</a>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <a href="#">Help Centre</a><a href="#">Privacy Policy</a
+            ><a href="#">Contact Us</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>2025 HealConnect - ITM Skills University</p>
+          <div class="footer-social">
+            <a href="#">In</a><a href="#">Tw</a><a href="#">Li</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="notificationBar" class="notification-bar"></div>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Recovery – HealConnect</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body id="recoveryPage">
+    <nav class="navbar">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo"
+          ><span class="logo-icon">🌿</span> HealConnect</a
+        >
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="book.html">Book Session</a></li>
+          <li><a href="library.html">Exercise Library</a></li>
+          <li><a href="progress.html">My Recovery</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+        <a href="book.html" class="btn btn-primary nav-cta">Book a Session</a>
+        <button class="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <nav id="mobileMenu" class="mobile-menu">
+      <button id="mobileClose" class="mobile-close-btn">✕</button>
+      <a href="index.html">Home</a><a href="book.html">Book Session</a>
+      <a href="library.html">Exercise Library</a
+      ><a href="progress.html">My Recovery</a><a href="pricing.html">Pricing</a>
+    </nav>
+
+    <header class="page-hero">
+      <div class="container">
+        <span class="section-label u-color-white-60">Patient Dashboard</span>
+        <h1>My Recovery</h1>
+        <p>
+          Track your sessions, monitor progress, and log your recovery notes.
+        </p>
+      </div>
+    </header>
+
+    <main class="recovery-section">
+      <div class="container">
+        <div class="recovery-layout">
+          <aside>
+            <nav class="recovery-nav" aria-label="Dashboard sections">
+              <h4>Dashboard</h4>
+              <div class="recovery-nav-item active">
+                <span class="nav-icon">📊</span> Overview
+              </div>
+              <div class="recovery-nav-item">
+                <span class="nav-icon">📅</span> Sessions
+              </div>
+              <div class="recovery-nav-item">
+                <span class="nav-icon">📝</span> Notes
+              </div>
+              <div class="recovery-nav-item">
+                <span class="nav-icon">🏋️</span> Exercises
+              </div>
+              <div class="recovery-nav-item">
+                <span class="nav-icon">⚙️</span> Settings
+              </div>
+              <div class="recovery-progress-box">
+                <div class="recovery-progress-inner">
+                  <p class="prog-label">Recovery Week 4</p>
+                  <div class="progress-bar-wrap prog-bar-full">
+                    <div
+                      class="progress-bar-fill"
+                      data-width="72%"
+                      style="width: 0%"
+                    ></div>
+                  </div>
+                  <p class="prog-note">72% programme complete</p>
+                </div>
+              </div>
+            </nav>
+          </aside>
+
+          <div>
+            <div class="stats-row">
+              <div class="stat-card fade-up">
+                <div class="stat-card-icon green">✅</div>
+                <strong id="completedCount">8</strong>
+                <span>Sessions Completed</span>
+              </div>
+              <div class="stat-card fade-up delay-1">
+                <div class="stat-card-icon blue">📅</div>
+                <strong id="upcomingCount">3</strong>
+                <span>Upcoming Sessions</span>
+              </div>
+              <div class="stat-card fade-up delay-2">
+                <div class="stat-card-icon purple">📈</div>
+                <strong>72%</strong>
+                <span>Recovery Progress</span>
+              </div>
+              <div class="stat-card fade-up delay-3">
+                <div class="stat-card-icon amber">⭐</div>
+                <strong>4.9</strong>
+                <span>Avg. Session Rating</span>
+              </div>
+            </div>
+
+            <section
+              class="sessions-panel fade-up"
+              aria-labelledby="upcoming-heading"
+            >
+              <div class="panel-header">
+                <h3 id="upcoming-heading">Upcoming Sessions</h3>
+                <a href="book.html" class="btn-sm">+ Book New</a>
+              </div>
+
+              <div class="session-item">
+                <div class="session-date-block">
+                  <span class="day">05</span><span class="month">Mar</span>
+                </div>
+                <div class="session-details">
+                  <strong>Back Pain Therapy</strong>
+                  <span
+                    >Dr. Sarah Chen &nbsp;·&nbsp; 3:00 PM &nbsp;·&nbsp; 45 min
+                    &nbsp;·&nbsp; Video Call</span
+                  >
+                </div>
+                <span class="session-status status-upcoming">Upcoming</span>
+                <button class="btn-sm mark-complete-btn u-ml-12">
+                  Mark Done
+                </button>
+              </div>
+
+              <div class="session-item">
+                <div class="session-date-block">
+                  <span class="day">10</span><span class="month">Mar</span>
+                </div>
+                <div class="session-details">
+                  <strong>Knee Rehabilitation</strong>
+                  <span
+                    >Dr. Marcus Webb &nbsp;·&nbsp; 11:00 AM &nbsp;·&nbsp; 60 min
+                    &nbsp;·&nbsp; Video Call</span
+                  >
+                </div>
+                <span class="session-status status-upcoming">Upcoming</span>
+                <button class="btn-sm mark-complete-btn u-ml-12">
+                  Mark Done
+                </button>
+              </div>
+
+              <div class="session-item">
+                <div class="session-date-block">
+                  <span class="day">15</span><span class="month">Mar</span>
+                </div>
+                <div class="session-details">
+                  <strong>Shoulder Recovery</strong>
+                  <span
+                    >Dr. Priya Sharma &nbsp;·&nbsp; 4:30 PM &nbsp;·&nbsp; 45 min
+                    &nbsp;·&nbsp; Video Call</span
+                  >
+                </div>
+                <span class="session-status status-upcoming">Upcoming</span>
+                <button class="btn-sm mark-complete-btn u-ml-12">
+                  Mark Done
+                </button>
+              </div>
+            </section>
+
+            <section
+              class="sessions-panel fade-up"
+              aria-labelledby="past-heading"
+            >
+              <div class="panel-header">
+                <h3 id="past-heading">Completed Sessions</h3>
+                <span class="panel-subtitle">Last 30 days</span>
+              </div>
+
+              <div class="session-item">
+                <div class="session-date-block muted">
+                  <span class="day">20</span>
+                  <span class="month">Feb</span>
+                </div>
+                <div class="session-details">
+                  <strong>Back Pain Therapy</strong
+                  ><span
+                    >Dr. Sarah Chen &nbsp;·&nbsp; 3:00 PM &nbsp;·&nbsp; Session
+                    8</span
+                  >
+                </div>
+                <span class="session-status status-completed">Completed</span>
+              </div>
+              <div class="session-item">
+                <div class="session-date-block muted">
+                  <span class="day">15</span>
+                  <span class="month">Feb</span>
+                </div>
+                <div class="session-details">
+                  <strong>Core Strengthening</strong
+                  ><span
+                    >Dr. Sarah Chen &nbsp;·&nbsp; 11:00 AM &nbsp;·&nbsp; Session
+                    7</span
+                  >
+                </div>
+                <span class="session-status status-completed">Completed</span>
+              </div>
+              <div class="session-item">
+                <div class="session-date-block muted">
+                  <span class="day">08</span>
+                  <span class="month">Feb</span>
+                </div>
+                <div class="session-details">
+                  <strong>Flexibility Assessment</strong
+                  ><span
+                    >Dr. Sarah Chen &nbsp;·&nbsp; 2:00 PM &nbsp;·&nbsp; Session
+                    6</span
+                  >
+                </div>
+                <span class="session-status status-completed">Completed</span>
+              </div>
+            </section>
+
+            <section class="notes-area fade-up" aria-labelledby="notes-heading">
+              <div class="panel-header">
+                <h3 id="notes-heading">Recovery Notes</h3>
+                <span class="panel-subtitle">Your personal journal</span>
+              </div>
+              <textarea
+                id="notesInput"
+                class="notes-input"
+                placeholder="How are you feeling today? Note your pain level (1-10), improvements, exercises completed, or any concerns to share with your therapist..."
+              ></textarea>
+              <button id="saveNoteBtn" class="btn btn-primary">
+                Save Note
+              </button>
+              <div id="notesList" class="notes-list"></div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="logo-text">🌿 HealConnect</div>
+            <p>Expert physiotherapy care delivered to your home.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Platform</h4>
+            <a href="book.html">Book Session</a
+            ><a href="library.html">Exercise Library</a
+            ><a href="progress.html">My Recovery</a
+            ><a href="pricing.html">Pricing</a>
+          </div>
+          <div class="footer-col">
+            <h4>Specialities</h4>
+            <a href="#">Back Pain</a><a href="#">Knee Rehab</a
+            ><a href="#">Shoulder Recovery</a><a href="#">Post-Surgery</a>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <a href="#">Help Centre</a><a href="#">Privacy Policy</a
+            ><a href="#">Contact Us</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>2025 HealConnect - ITM Skills University</p>
+          <div class="footer-social">
+            <a href="#">In</a><a href="#">Tw</a><a href="#">Li</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="notificationBar" class="notification-bar"></div>
+    <script src="main.js"></script>
+  </body>
+</html>

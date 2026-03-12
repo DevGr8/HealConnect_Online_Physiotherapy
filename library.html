@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise Library – HealConnect</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo"
+          ><span class="logo-icon">🌿</span> HealConnect</a
+        >
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="book.html">Book Session</a></li>
+          <li><a href="library.html">Exercise Library</a></li>
+          <li><a href="progress.html">My Recovery</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+        <a href="book.html" class="btn btn-primary nav-cta">Book a Session</a>
+        <button class="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <nav id="mobileMenu" class="mobile-menu">
+      <button id="mobileClose" class="mobile-close-btn">✕</button>
+      <a href="index.html">Home</a><a href="book.html">Book Session</a>
+      <a href="library.html">Exercise Library</a
+      ><a href="progress.html">My Recovery</a><a href="pricing.html">Pricing</a>
+    </nav>
+
+    <header class="page-hero">
+      <div class="container">
+        <span class="section-label u-color-white-60">Guided Exercises</span>
+        <h1>Exercise Library</h1>
+        <p>
+          Therapist-approved video guides categorised by injury type and
+          difficulty level.
+        </p>
+      </div>
+    </header>
+
+    <main class="library-section">
+      <div class="container">
+        <div class="filter-controls-row">
+          <div
+            class="filter-bar"
+            role="group"
+            aria-label="Filter exercises by category"
+          >
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="back-pain">
+              🔶 Back Pain
+            </button>
+            <button class="filter-btn" data-filter="knee">🔵 Knee Rehab</button>
+            <button class="filter-btn" data-filter="shoulder">
+              🟣 Shoulder
+            </button>
+            <button class="filter-btn" data-filter="post-surgery">
+              🔴 Post-Surgery
+            </button>
+          </div>
+          <div class="filter-right">
+            <label for="categoryDropdown" class="filter-count-label"
+              >Quick filter:</label
+            >
+            <select id="categoryDropdown" class="form-control filter-select">
+              <option value="all">All Categories</option>
+              <option value="back-pain">Back Pain</option>
+              <option value="knee">Knee Rehab</option>
+              <option value="shoulder">Shoulder</option>
+              <option value="post-surgery">Post-Surgery</option>
+            </select>
+            <span class="filter-count-label"
+              >Showing <strong id="exerciseCount">9</strong> exercises</span
+            >
+          </div>
+        </div>
+
+        <div class="diff-legend">
+          <span class="diff-legend-label">Difficulty key:</span>
+          <span class="difficulty diff-beginner"
+            ><span class="diff-dot"></span><span>Beginner</span></span
+          >
+          <span class="difficulty diff-intermediate"
+            ><span class="diff-dot"></span><span>Intermediate</span></span
+          >
+          <span class="difficulty diff-advanced"
+            ><span class="diff-dot"></span><span>Advanced</span></span
+          >
+        </div>
+
+        <div id="exerciseGrid" class="ex-card-grid" role="list">
+          <article
+            class="ex-card fade-up"
+            data-category="back-pain"
+            role="listitem"
+          >
+            <div class="ex-video-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/LIVJZZyZ2qM?si=DP5WLooOTRJb90DS"
+                title="Cat-Cow Stretch for Back Pain"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+              <span class="ex-duration">8:30</span>
+            </div>
+            <div class="ex-body">
+              <div class="ex-meta">
+                <span class="tag tag-back-pain">Back Pain</span>
+                <span class="difficulty diff-beginner"
+                  ><span class="diff-dot"></span><span>Beginner</span></span
+                >
+              </div>
+              <h3 class="ex-title">Cat-Cow Stretch</h3>
+              <p class="ex-desc">
+                Gentle spinal flexion and extension to relieve lower back
+                tension and improve mobility.
+              </p>
+              <div class="ex-footer">
+                <div class="ex-stats">
+                  <span>📦 3 sets</span>
+                  <span>🔁 12 reps</span>
+                </div>
+                <button
+                  class="btn-sm"
+                  onclick="addToRecovery(this, 'Cat-Cow Stretch')"
+                >
+                  Add to Plan
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="ex-card fade-up"
+            data-category="back-pain"
+            role="listitem"
+            class="delay-05"
+          >
+            <div class="ex-video-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/wiFNA3sqjCA?rel=0&modestbranding=1"
+                title="Bird-Dog Exercise"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+              <span class="ex-duration">12:15</span>
+            </div>
+            <div class="ex-body">
+              <div class="ex-meta">
+                <span class="tag tag-back-pain">Back Pain</span>
+                <span class="difficulty diff-intermediate"
+                  ><span class="diff-dot"></span><span>Intermediate</span></span
+                >
+              </div>
+              <h3 class="ex-title">Bird-Dog Exercise</h3>
+              <p class="ex-desc">
+                Core stabilisation movement to strengthen lower back and glute
+                muscles simultaneously.
+              </p>
+              <div class="ex-footer">
+                <div class="ex-stats">
+                  <span>📦 3 sets</span><span>🔁 10 reps</span>
+                </div>
+                <button
+                  class="btn-sm"
+                  onclick="addToRecovery(this, 'Bird-Dog Exercise')"
+                >
+                  Add to Plan
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="ex-card fade-up"
+            data-category="back-pain"
+            role="listitem"
+            class="delay-1"
+          >
+            <div class="ex-video-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/brgT1Qq4Tk0?si=ypD667AESlUH8rIk"
+                title="Glute Bridge for Lower Back"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+              <span class="ex-duration">10:00</span>
+            </div>
+            <div class="ex-body">
+              <div class="ex-meta">
+                <span class="tag tag-back-pain">Back Pain</span>
+                <span class="difficulty diff-beginner"
+                  ><span class="diff-dot"></span><span>Beginner</span></span
+                >
+              </div>
+              <h3 class="ex-title">Pelvic Tilt &amp; Glute Bridge</h3>
+              <p class="ex-desc">
+                Foundational glute and core exercise essential for lumbar spine
+                rehabilitation.
+              </p>
+              <div class="ex-footer">
+                <div class="ex-stats">
+                  <span>📦 3 sets</span><span>🔁 12 reps</span>
+                </div>
+                <button
+                  class="btn-sm"
+                  onclick="addToRecovery(this, 'Glute Bridge')"
+                >
+                  Add to Plan
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="ex-card fade-up" data-category="knee" role="listitem">
+            <div class="ex-video-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/xdKm8PSX438?si=BDzzOcXdxa6q54AQ"
+                title="Terminal Knee Extension"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+              <span class="ex-duration">6:45</span>
+            </div>
+            <div class="ex-body">
+              <div class="ex-meta">
+                <span class="tag tag-knee">Knee Rehab</span>
+                <span class="difficulty diff-beginner"
+                  ><span class="diff-dot"></span><span>Beginner</span></span
+                >
+              </div>
+              <h3 class="ex-title">Terminal Knee Extension</h3>
+              <p class="ex-desc">
+                Targeted quadriceps strengthening for knee stability and pain
+                reduction.
+              </p>
+              <div class="ex-footer">
+                <div class="ex-stats">
+                  <span>📦 2 sets</span><span>🔁 15 reps</span>
+                </div>
+                <button class="btn-sm" onclick="addToRecovery(this, 'TKE')">
+                  Add to Plan
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="ex-card fade-up"
+            data-category="knee"
+            role="listitem"
+            class="delay-05"
+          >
+            <div class="ex-video-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/Qau3RzMY58A?si=AFALcGDTRTpYtzrB"
+                title="Wall Squat for Knee Rehab"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+              <span class="ex-duration">14:20</span>
+            </div>
+            <div class="ex-body">
+              <div class="ex-meta">
+                <span class="tag tag-knee">Knee Rehab</span>
+                <span class="difficulty diff-intermediate"
+                  ><span class="diff-dot"></span><span>Intermediate</span></span
+                >
+              </div>
+              <h3 class="ex-title">Wall Squat Progression</h3>
+              <p class="ex-desc">
+                Progressive squat variations to rebuild knee strength after
+                injury or surgery.
+              </p>
+              <div class="ex-footer">
+                <div class="ex-stats">
+                  <span>📦 3 sets</span><span>🔁 8 reps</span>
+                </div>
+                <button
+                  class="btn-sm"
+                  onclick="addToRecovery(this, 'Wall Squat')"
+                >
+                  Add to Plan
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="ex-card fade-up"
+            data-category="shoulder"
+            role="listitem"
+          >
+            <div class="ex-video-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/grXjaaVgti4?si=nsPM1FIO36E4baff"
+                title="Pendulum Shoulder Exercise"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+              <span class="ex-duration">5:00</span>
+            </div>
+            <div class="ex-body">
+              <div class="ex-meta">
+                <span class="tag tag-shoulder">Shoulder</span>
+                <span class="difficulty diff-beginner"
+                  ><span class="diff-dot"></span><span>Beginner</span></span
+                >
+              </div>
+              <h3 class="ex-title">Pendulum Shoulder Circles</h3>
+              <p class="ex-desc">
+                Passive range-of-motion exercise to gently mobilise a stiff or
+                recovering shoulder joint.
+              </p>
+              <div class="ex-footer">
+                <div class="ex-stats">
+                  <span>📦 2 sets</span><span>🔁 20 circles</span>
+                </div>
+                <button
+                  class="btn-sm"
+                  onclick="addToRecovery(this, 'Pendulum Circles')"
+                >
+                  Add to Plan
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="ex-card fade-up"
+            data-category="shoulder"
+            role="listitem"
+            class="delay-05"
+          >
+            <div class="ex-video-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/UHlhyti-RBQ?si=MHRrLwgVcBoY8LLv"
+                title="Scapular Retraction"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+              <span class="ex-duration">9:50</span>
+            </div>
+            <div class="ex-body">
+              <div class="ex-meta">
+                <span class="tag tag-shoulder">Shoulder</span>
+                <span class="difficulty diff-intermediate"
+                  ><span class="diff-dot"></span><span>Intermediate</span></span
+                >
+              </div>
+              <h3 class="ex-title">Scapular Retraction</h3>
+              <p class="ex-desc">
+                Strengthening muscles between shoulder blades to improve posture
+                and joint stability.
+              </p>
+              <div class="ex-footer">
+                <div class="ex-stats">
+                  <span>📦 3 sets</span><span>🔁 12 reps</span>
+                </div>
+                <button
+                  class="btn-sm"
+                  onclick="addToRecovery(this, 'Scapular Retraction')"
+                >
+                  Add to Plan
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="ex-card fade-up"
+            data-category="post-surgery"
+            role="listitem"
+          >
+            <div class="ex-video-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/7l_r2LBD2t4?si=1IbRL-mxY33oVct8"
+                title="Ankle Pumps Post-Surgery"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+              <span class="ex-duration">4:30</span>
+            </div>
+            <div class="ex-body">
+              <div class="ex-meta">
+                <span class="tag tag-post-surgery">Post-Surgery</span>
+                <span class="difficulty diff-beginner"
+                  ><span class="diff-dot"></span><span>Beginner</span></span
+                >
+              </div>
+              <h3 class="ex-title">Ankle Pump &amp; Circles</h3>
+              <p class="ex-desc">
+                Post-surgical circulation exercise to prevent clots and reduce
+                lower limb swelling.
+              </p>
+              <div class="ex-footer">
+                <div class="ex-stats">
+                  <span>📦 4 sets</span><span>🔁 15 reps</span>
+                </div>
+                <button
+                  class="btn-sm"
+                  onclick="addToRecovery(this, 'Ankle Pumps')"
+                >
+                  Add to Plan
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="ex-card fade-up"
+            data-category="post-surgery"
+            role="listitem"
+            class="delay-05"
+          >
+            <div class="ex-video-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/gyK-UmNQ4d4?si=cS85mHSHgQu8uqfo"
+                title="Scar Tissue Mobilisation"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                "
+                allowfullscreen
+                loading="lazy"
+              ></iframe>
+              <span class="ex-duration">18:00</span>
+            </div>
+            <div class="ex-body">
+              <div class="ex-meta">
+                <span class="tag tag-post-surgery">Post-Surgery</span>
+                <span class="difficulty diff-advanced"
+                  ><span class="diff-dot"></span><span>Advanced</span></span
+                >
+              </div>
+              <h3 class="ex-title">Scar Tissue Mobilisation</h3>
+              <p class="ex-desc">
+                Gentle soft-tissue techniques to improve flexibility and reduce
+                scar adhesions after surgery.
+              </p>
+              <div class="ex-footer">
+                <div class="ex-stats">
+                  <span>📦 1 set</span><span>🔁 5 min</span>
+                </div>
+                <button
+                  class="btn-sm"
+                  onclick="addToRecovery(this, 'Scar Mobilisation')"
+                >
+                  Add to Plan
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+
+    <section class="cta-banner">
+      <div class="container u-relative u-z1">
+        <h2>Need a personalised exercise plan?</h2>
+        <p>
+          Our therapists create custom programmes based on your specific injury
+          and fitness level.
+        </p>
+        <div class="cta-actions">
+          <a href="book.html" class="btn btn-cta-white">Book Assessment</a>
+          <a href="pricing.html" class="btn btn-ghost">View Plans</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="logo-text">🌿 HealConnect</div>
+            <p>Expert physiotherapy care delivered to your home.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Platform</h4>
+            <a href="book.html">Book Session</a
+            ><a href="library.html">Exercise Library</a
+            ><a href="progress.html">My Recovery</a
+            ><a href="pricing.html">Pricing</a>
+          </div>
+          <div class="footer-col">
+            <h4>Specialities</h4>
+            <a href="#">Back Pain</a><a href="#">Knee Rehab</a
+            ><a href="#">Shoulder Recovery</a><a href="#">Post-Surgery</a>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <a href="#">Help Centre</a><a href="#">Privacy Policy</a
+            ><a href="#">Contact Us</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>2025 HealConnect - ITM Skills University</p>
+          <div class="footer-social">
+            <a href="#">In</a><a href="#">Tw</a><a href="#">Li</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="notificationBar" class="notification-bar"></div>
+    <script src="main.js"></script>
+  </body>
+</html>

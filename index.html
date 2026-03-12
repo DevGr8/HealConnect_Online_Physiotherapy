@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HealConnect – Online Physiotherapy</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>"
+    />
+  </head>
+  <body>
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <span class="logo-icon">🌿</span>
+          HealConnect
+        </a>
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="book.html">Book Session</a></li>
+          <li><a href="library.html">Exercise Library</a></li>
+          <li><a href="progress.html">My Recovery</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+        <a href="book.html" class="btn btn-primary nav-cta">Book a Session</a>
+        <button
+          class="hamburger"
+          aria-label="Toggle mobile menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <nav id="mobileMenu" class="mobile-menu" aria-label="Mobile Navigation">
+      <button id="mobileClose" aria-label="Close menu" class="mobile-close-btn">
+        ✕
+      </button>
+      <a href="index.html">Home</a>
+      <a href="book.html">Book Session</a>
+      <a href="library.html">Exercise Library</a>
+      <a href="progress.html">My Recovery</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="book.html" class="btn btn-primary u-mt-20">Book a Session</a>
+    </nav>
+
+    <header class="hero" role="banner">
+      <div class="hero-bg-shapes" aria-hidden="true">
+        <div class="hero-blob hero-blob-1"></div>
+        <div class="hero-blob hero-blob-2"></div>
+      </div>
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <span class="hero-badge">
+              <span class="dot" aria-hidden="true"></span>
+              Now accepting new patients
+            </span>
+            <h1>Heal Better,<br /><em>Move Freely</em></h1>
+            <p>
+              Expert physiotherapy from the comfort of your home. Personalised
+              recovery plans, certified therapists, and real-time progress
+              tracking — all in one platform.
+            </p>
+            <div class="hero-actions">
+              <a href="book.html" class="btn btn-ghost"
+                >Book Free Consultation</a
+              >
+              <a href="library.html" class="btn btn-hero-explore"
+                >Explore Exercises</a
+              >
+            </div>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <strong>8,400+</strong>
+                <span>Patients Recovered</span>
+              </div>
+              <div class="hero-stat">
+                <strong>96%</strong>
+                <span>Satisfaction Rate</span>
+              </div>
+              <div class="hero-stat">
+                <strong>50+</strong>
+                <span>Expert Therapists</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-card-main">
+              <div class="floating-card floating-card-1">
+                <div class="icon-wrap">🏆</div>
+                <div>
+                  <strong>Top Rated</strong>
+                  <span class="floating-sub">Telehealth 2024</span>
+                </div>
+              </div>
+              <div class="therapist-profile">
+                <div class="therapist-avatar">👩‍⚕️</div>
+                <div class="therapist-info">
+                  <h4>Dr. Sarah Chen</h4>
+                  <span
+                    ><span class="rating">★★★★★</span> 4.9 · Spine
+                    Specialist</span
+                  >
+                </div>
+              </div>
+              <p class="next-session-label">Your Next Session</p>
+              <p class="session-time">Today, 3:00 PM</p>
+              <div class="session-meta">
+                <span class="meta-chip">🎥 Video Call</span>
+                <span class="meta-chip">🦴 Back Pain</span>
+                <span class="meta-chip">⏱ 45 min</span>
+              </div>
+              <div class="floating-card floating-card-2">
+                <p class="progress-mini">Recovery Progress · Week 4</p>
+                <div class="progress-bar-wrap">
+                  <div class="progress-bar-fill"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="services-strip" aria-label="Key Features">
+      <div class="container">
+        <div class="strip-inner">
+          <div class="strip-item">
+            <div class="strip-icon">🎥</div>
+            <span>HD Video Sessions</span>
+          </div>
+          <div class="strip-item">
+            <div class="strip-icon">📋</div>
+            <span>Custom Recovery Plans</span>
+          </div>
+          <div class="strip-item">
+            <div class="strip-icon">🔔</div>
+            <span>Smart Reminders</span>
+          </div>
+          <div class="strip-item">
+            <div class="strip-icon">📊</div>
+            <span>Progress Tracking</span>
+          </div>
+          <div class="strip-item">
+            <div class="strip-icon">🌍</div>
+            <span>Available Everywhere</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-section" aria-labelledby="how-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="section-label">How It Works</span>
+          <h2 id="how-heading">Your recovery journey in 4 simple steps</h2>
+          <p>
+            From assessment to full recovery — everything managed for you
+            through one seamless platform.
+          </p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card fade-up">
+            <div class="step-number">1</div>
+            <h3>Book Your Assessment</h3>
+            <p>
+              Choose your therapist, injury type, and preferred time slot in
+              under 2 minutes.
+            </p>
+          </div>
+          <div class="step-card fade-up delay-1">
+            <div class="step-number">2</div>
+            <h3>Initial Consultation</h3>
+            <p>
+              Your therapist conducts a thorough video assessment and builds a
+              recovery plan.
+            </p>
+          </div>
+          <div class="step-card fade-up delay-2">
+            <div class="step-number">3</div>
+            <h3>Follow Your Programme</h3>
+            <p>
+              Access guided exercises, attend live sessions, and receive daily
+              reminders.
+            </p>
+          </div>
+          <div class="step-card fade-up delay-3">
+            <div class="step-number">4</div>
+            <h3>Track & Recover</h3>
+            <p>
+              Monitor your milestones and adjust your programme as you improve.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="therapists-section" aria-labelledby="therapists-heading">
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="section-label">Our Specialists</span>
+          <h2 id="therapists-heading">Meet your expert physiotherapists</h2>
+          <p>
+            All therapists are certified, experienced, and dedicated to your
+            full recovery.
+          </p>
+        </div>
+        <div class="therapist-grid">
+          <article class="therapist-card fade-up">
+            <div class="t-avatar">👩‍⚕️</div>
+            <h3>Dr. Sarah Chen</h3>
+            <p class="speciality">Spine & Lower Back</p>
+            <p class="t-rating"><span>★★★★★</span> 4.9 · 320 sessions</p>
+            <a
+              href="book.html?therapist=sarah"
+              class="btn btn-outline u-full-btn"
+              >Book Now</a
+            >
+          </article>
+          <article class="therapist-card fade-up delay-1">
+            <div class="t-avatar">👨‍⚕️</div>
+            <h3>Dr. Marcus Webb</h3>
+            <p class="speciality">Knee & Sports Injuries</p>
+            <p class="t-rating"><span>★★★★★</span> 4.8 · 280 sessions</p>
+            <a
+              href="book.html?therapist=marcus"
+              class="btn btn-outline u-full-btn"
+              >Book Now</a
+            >
+          </article>
+          <article class="therapist-card fade-up delay-2">
+            <div class="t-avatar">👩‍⚕️</div>
+            <h3>Dr. Priya Sharma</h3>
+            <p class="speciality">Shoulder & Post-Surgery</p>
+            <p class="t-rating"><span>★★★★★</span> 4.9 · 410 sessions</p>
+            <a
+              href="book.html?therapist=priya"
+              class="btn btn-outline u-full-btn"
+              >Book Now</a
+            >
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="testimonials-section"
+      aria-labelledby="testimonials-heading"
+    >
+      <div class="container">
+        <div class="section-header fade-up">
+          <span class="section-label">Patient Stories</span>
+          <h2 id="testimonials-heading">Real recoveries, real results</h2>
+          <p>
+            Thousands of patients have regained their mobility and quality of
+            life with HealConnect.
+          </p>
+        </div>
+        <div class="testimonials-grid">
+          <article class="testimonial-card fade-up">
+            <span class="quote-mark">"</span>
+            <p>
+              After my disc herniation, I could barely walk. Dr. Sarah's
+              programme had me back on the tennis court in 10 weeks. The video
+              sessions were incredibly convenient and professional.
+            </p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">🧑</div>
+              <div class="reviewer-info">
+                <div class="stars">★★★★★</div>
+                <strong>Arjun Mehta</strong>
+                <span>Disc Herniation Recovery</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card fade-up delay-1">
+            <span class="quote-mark">"</span>
+            <p>
+              Post-knee replacement, I was nervous about online therapy. Dr.
+              Marcus made every session feel just like an in-person appointment.
+              I'm now at 95% mobility!
+            </p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">👩</div>
+              <div class="reviewer-info">
+                <div class="stars">★★★★★</div>
+                <strong>Kavitha Rajan</strong>
+                <span>Knee Replacement Rehab</span>
+              </div>
+            </div>
+          </article>
+          <article class="testimonial-card fade-up delay-2">
+            <span class="quote-mark">"</span>
+            <p>
+              I travel constantly for work. HealConnect let me continue my
+              shoulder rehab from three different countries. The exercise
+              library is a game-changer for self-practice.
+            </p>
+            <div class="reviewer">
+              <div class="reviewer-avatar">👨</div>
+              <div class="reviewer-info">
+                <div class="stars">★★★★★</div>
+                <strong>Rahul Desai</strong>
+                <span>Rotator Cuff Recovery</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner" aria-labelledby="cta-heading">
+      <div class="container u-relative u-z1">
+        <h2 id="cta-heading">Start your recovery today</h2>
+        <p>
+          Book a free 15-minute consultation with one of our expert
+          physiotherapists and take the first step towards living pain-free.
+        </p>
+        <div class="cta-actions">
+          <a href="book.html" class="btn btn-cta-white"
+            >Book Free Consultation</a
+          >
+          <a href="pricing.html" class="btn btn-ghost">View Pricing</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="logo-text">🌿 HealConnect</div>
+            <p>
+              Expert physiotherapy care delivered to your home. Recover faster,
+              move better, live fully.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Platform</h4>
+            <a href="book.html">Book Session</a>
+            <a href="library.html">Exercise Library</a>
+            <a href="progress.html">My Recovery</a>
+            <a href="pricing.html">Pricing</a>
+          </div>
+          <div class="footer-col">
+            <h4>Specialities</h4>
+            <a href="#">Back Pain</a>
+            <a href="#">Knee Rehab</a>
+            <a href="#">Shoulder Recovery</a>
+            <a href="#">Post-Surgery</a>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <a href="#">Help Centre</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2025 HealConnect · Made for ITM Skills University</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">In</a>
+            <a href="#" aria-label="Twitter">Tw</a>
+            <a href="#" aria-label="LinkedIn">Li</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="notificationBar" class="notification-bar"></div>
+    <script src="main.js"></script>
+  </body>
+</html>

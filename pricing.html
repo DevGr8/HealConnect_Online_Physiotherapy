@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing – HealConnect</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo"
+          ><span class="logo-icon">🌿</span> HealConnect</a
+        >
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="book.html">Book Session</a></li>
+          <li><a href="library.html">Exercise Library</a></li>
+          <li><a href="progress.html">My Recovery</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+        </ul>
+        <a href="book.html" class="btn btn-primary nav-cta">Book a Session</a>
+        <button class="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <nav id="mobileMenu" class="mobile-menu">
+      <button id="mobileClose" class="mobile-close-btn">✕</button>
+      <a href="index.html">Home</a><a href="book.html">Book Session</a>
+      <a href="library.html">Exercise Library</a
+      ><a href="progress.html">My Recovery</a><a href="pricing.html">Pricing</a>
+    </nav>
+
+    <header class="page-hero">
+      <div class="container">
+        <span class="section-label u-color-white-60">Plans and Pricing</span>
+        <h1>Simple, Transparent Pricing</h1>
+        <p>
+          Choose the plan that fits your recovery needs. No hidden fees, cancel
+          anytime.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="pricing-section">
+        <div class="container">
+          <div class="pricing-toggle">
+            <span class="toggle-label per-session active">Per Session</span>
+            <button
+              id="pricingToggle"
+              class="toggle-switch"
+              aria-label="Toggle billing period"
+              role="switch"
+            >
+              <span class="toggle-knob"></span>
+            </button>
+            <span class="toggle-label monthly">Monthly Plan</span>
+            <span class="savings-badge">Save up to 25%</span>
+          </div>
+
+          <div class="pricing-grid">
+            <article
+              class="pricing-card fade-up"
+              data-plan="starter"
+              onclick="selectPlan(this, 'starter')"
+            >
+              <span class="selected-badge">✓ Selected</span>
+              <div class="plan-radio-wrap">
+                <input
+                  type="radio"
+                  name="plan"
+                  id="planStarter"
+                  value="starter"
+                />
+                <label class="plan-radio-label" for="planStarter"
+                  >Select this plan</label
+                >
+              </div>
+              <div class="plan-icon">🌱</div>
+              <p class="plan-name">Starter</p>
+              <h3 class="plan-title">Essential Care</h3>
+              <div class="price-display">
+                <span class="currency">Rs.</span>
+                <span class="price-amount">799</span>
+              </div>
+              <p class="price-period">per session</p>
+              <p class="price-original hidden-init"></p>
+              <div class="plan-divider"></div>
+              <ul class="plan-features">
+                <li>
+                  <span class="feature-check">✓</span> 1 live video session
+                </li>
+                <li>
+                  <span class="feature-check">✓</span> Basic exercise guide (5
+                  videos)
+                </li>
+                <li>
+                  <span class="feature-check">✓</span> Session summary notes
+                </li>
+                <li><span class="feature-check">✓</span> Email support</li>
+                <li class="feature-cross">
+                  <span class="feature-check">–</span> Progress tracking
+                </li>
+                <li class="feature-cross">
+                  <span class="feature-check">–</span> Custom recovery plan
+                </li>
+                <li class="feature-cross">
+                  <span class="feature-check">–</span> Priority booking
+                </li>
+              </ul>
+              <a href="book.html" class="btn btn-outline u-full-btn"
+                >Get Started</a
+              >
+            </article>
+
+            <article
+              class="pricing-card featured fade-up delay-1"
+              data-plan="plus"
+              onclick="selectPlan(this, 'plus')"
+            >
+              <span class="popular-badge">Most Popular</span>
+              <span class="selected-badge">✓ Selected</span>
+              <div class="plan-radio-wrap">
+                <input type="radio" name="plan" id="planPlus" value="plus" />
+                <label class="plan-radio-label" for="planPlus"
+                  >Select this plan</label
+                >
+              </div>
+              <div class="plan-icon">🌿</div>
+              <p class="plan-name">Plus</p>
+              <h3 class="plan-title">Complete Recovery</h3>
+              <div class="price-display">
+                <span class="currency">Rs.</span>
+                <span class="price-amount">1,299</span>
+              </div>
+              <p class="price-period">per session</p>
+              <p class="price-original hidden-init"></p>
+              <div class="plan-divider"></div>
+              <ul class="plan-features">
+                <li>
+                  <span class="feature-check">✓</span> 1 live video session
+                </li>
+                <li>
+                  <span class="feature-check">✓</span> Full exercise library
+                  access
+                </li>
+                <li>
+                  <span class="feature-check">✓</span> Detailed progress
+                  tracking
+                </li>
+                <li>
+                  <span class="feature-check">✓</span> Custom recovery plan
+                </li>
+                <li>
+                  <span class="feature-check">✓</span> Session reminders and
+                  notes
+                </li>
+                <li>
+                  <span class="feature-check">✓</span> Chat support between
+                  sessions
+                </li>
+                <li class="feature-cross">
+                  <span class="feature-check">–</span> Priority booking
+                </li>
+              </ul>
+              <a href="book.html" class="btn btn-ghost u-full-btn"
+                >Choose Plus</a
+              >
+            </article>
+
+            <article
+              class="pricing-card fade-up delay-2"
+              data-plan="premium"
+              onclick="selectPlan(this, 'premium')"
+            >
+              <span class="selected-badge">✓ Selected</span>
+              <div class="plan-radio-wrap">
+                <input
+                  type="radio"
+                  name="plan"
+                  id="planPremium"
+                  value="premium"
+                />
+                <label class="plan-radio-label" for="planPremium"
+                  >Select this plan</label
+                >
+              </div>
+              <div class="plan-icon">🏆</div>
+              <p class="plan-name">Premium</p>
+              <h3 class="plan-title">Elite Rehabilitation</h3>
+              <div class="price-display">
+                <span class="currency">Rs.</span>
+                <span class="price-amount">1,899</span>
+              </div>
+              <p class="price-period">per session</p>
+              <p class="price-original hidden-init"></p>
+              <div class="plan-divider"></div>
+              <ul class="plan-features">
+                <li>
+                  <span class="feature-check">✓</span> 1 live video session (60
+                  min)
+                </li>
+                <li>
+                  <span class="feature-check">✓</span> Full exercise library
+                  access
+                </li>
+                <li>
+                  <span class="feature-check">✓</span> Advanced progress
+                  analytics
+                </li>
+                <li>
+                  <span class="feature-check">✓</span> Custom recovery plan +
+                  updates
+                </li>
+                <li>
+                  <span class="feature-check">✓</span> Priority therapist
+                  booking
+                </li>
+                <li>
+                  <span class="feature-check">✓</span> Unlimited chat support
+                </li>
+                <li>
+                  <span class="feature-check">✓</span> Home visit option
+                  available
+                </li>
+              </ul>
+              <a href="book.html" class="btn btn-primary u-full-btn"
+                >Go Premium</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="comparison-section" aria-labelledby="compare-heading">
+        <div class="container">
+          <div class="section-header fade-up">
+            <span class="section-label">Feature Comparison</span>
+            <h2 id="compare-heading">Compare all plans</h2>
+            <p>A full breakdown of what is included in each plan.</p>
+          </div>
+          <div class="comparison-table fade-up">
+            <table>
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Starter</th>
+                  <th class="highlight">Plus</th>
+                  <th>Premium</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Live Video Session</td>
+                  <td>45 min</td>
+                  <td>45 min</td>
+                  <td>60 min</td>
+                </tr>
+                <tr>
+                  <td>Exercise Library</td>
+                  <td>5 videos</td>
+                  <td>Full access</td>
+                  <td>Full access</td>
+                </tr>
+                <tr>
+                  <td>Recovery Dashboard</td>
+                  <td><span class="check-no">–</span></td>
+                  <td><span class="check-yes">✓</span></td>
+                  <td><span class="check-yes">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Custom Recovery Plan</td>
+                  <td><span class="check-no">–</span></td>
+                  <td><span class="check-yes">✓</span></td>
+                  <td><span class="check-yes">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Session Reminders</td>
+                  <td><span class="check-yes">✓</span></td>
+                  <td><span class="check-yes">✓</span></td>
+                  <td><span class="check-yes">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Progress Analytics</td>
+                  <td><span class="check-no">–</span></td>
+                  <td>Basic</td>
+                  <td>Advanced</td>
+                </tr>
+                <tr>
+                  <td>Chat Support</td>
+                  <td>Email only</td>
+                  <td>Between sessions</td>
+                  <td>Unlimited</td>
+                </tr>
+                <tr>
+                  <td>Priority Booking</td>
+                  <td><span class="check-no">–</span></td>
+                  <td><span class="check-no">–</span></td>
+                  <td><span class="check-yes">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Home Visit Option</td>
+                  <td><span class="check-no">–</span></td>
+                  <td><span class="check-no">–</span></td>
+                  <td><span class="check-yes">✓</span></td>
+                </tr>
+                <tr>
+                  <td>Monthly Discount</td>
+                  <td><span class="check-no">–</span></td>
+                  <td>Up to 20%</td>
+                  <td>Up to 25%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits-section">
+        <div class="container">
+          <div class="section-header fade-up">
+            <span class="section-label">Why Choose HealConnect</span>
+            <h2>Everything you need to recover fully</h2>
+          </div>
+          <div class="benefits-grid fade-up">
+            <div class="therapist-card">
+              <div class="benefit-icon">🎥</div>
+              <h3 class="benefit-title">HD Video Sessions</h3>
+              <p class="benefit-desc">
+                Crystal-clear video with no lag, fully encrypted for your
+                privacy. Works on any device.
+              </p>
+            </div>
+            <div class="therapist-card">
+              <div class="benefit-icon">🔔</div>
+              <h3 class="benefit-title">Smart Reminders</h3>
+              <p class="benefit-desc">
+                Automated SMS and email reminders before every session and for
+                your daily exercises.
+              </p>
+            </div>
+            <div class="therapist-card">
+              <div class="benefit-icon">📊</div>
+              <h3 class="benefit-title">Progress Tracking</h3>
+              <p class="benefit-desc">
+                Visual dashboards that show your recovery milestones and
+                exercise completion rates.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-banner">
+        <div class="container u-relative u-z1">
+          <h2>Start your recovery — risk free</h2>
+          <p>
+            Your first session includes a 15-minute free consultation. No
+            commitments required.
+          </p>
+          <div class="cta-actions">
+            <a href="book.html" class="btn btn-cta-white"
+              >Book Free Consultation</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="logo-text">🌿 HealConnect</div>
+            <p>Expert physiotherapy care delivered to your home.</p>
+          </div>
+          <div class="footer-col">
+            <h4>Platform</h4>
+            <a href="book.html">Book Session</a
+            ><a href="library.html">Exercise Library</a
+            ><a href="progress.html">My Recovery</a
+            ><a href="pricing.html">Pricing</a>
+          </div>
+          <div class="footer-col">
+            <h4>Specialities</h4>
+            <a href="#">Back Pain</a><a href="#">Knee Rehab</a
+            ><a href="#">Shoulder Recovery</a><a href="#">Post-Surgery</a>
+          </div>
+          <div class="footer-col">
+            <h4>Support</h4>
+            <a href="#">Help Centre</a><a href="#">Privacy Policy</a
+            ><a href="#">Contact Us</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>2025 HealConnect - ITM Skills University</p>
+          <div class="footer-social">
+            <a href="#">In</a><a href="#">Tw</a><a href="#">Li</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="notificationBar" class="notification-bar"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
